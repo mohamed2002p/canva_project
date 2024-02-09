@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Editor</title>
+<link rel="stylesheet" type="text/css" href="styles/master.css">
+</head>
+<body>
+
+<!-- Image upload -->
+<div id="toolbar">
+    <label for="imageInput" id="upload-image-button" class="button">Upload Image</label>
+    <input type="file" id="imageInput" accept="image/*" required>
+    <button class="button" onclick="undo()">Undo</button>
+    <button class="button" onclick="redo()">Redo</button>
+    <button class="button" onclick="zoomIn()">Zoom In</button>
+    <button class="button" onclick="zoomOut()">Zoom Out</button>
+    <button id="delete-button" class="button" onclick="deleteSelectedObject()">Delete</button>
+</div>
+
+<div id="canvas-container">
+    <canvas id="canvas" width="800" height="600"></canvas>
+</div>
+
+<div id="text-controls">
+    <input type="text" id="titleInput" placeholder="Title">
+    <input type="text" id="descriptionInput" placeholder="Description">
+    <input type="color" id="textColorInput" value="#000000">
+    <input type="number" id="fontSizeInput" value="16" min="1">
+    <select id="fontWeightInput">
+        <option value="normal">Normal</option>
+        <option value="bold">Bold</option>
+    </select>
+    <button id="add-text-button" class="button" onclick="addText()">Add Text</button>
+</div>
+
+<!-- Template previews -->
+<div id="templatePreviews">
+    <img src="images/21.png" class="template-preview" alt="Template 1 Preview">
+    <img src="images/img1.jpeg" class="template-preview" alt="Template 2 Preview">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.0.0-beta.12/fabric.min.js"></script>
+<script src="js/canva.js"></script>
+</body>
+</html>

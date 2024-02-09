@@ -1,0 +1,125 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Default font family */
+}
+
+#canvas-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Adjusted height for mobile */
+    overflow: hidden;
+}
+
+#canvas {
+    border: 1px solid #ccc;
+    max-width: calc(100% - 20px); /* Make canvas responsive */
+    max-height: 100%; /* Make canvas responsive */
+    margin-right: 10px; /* Add space between canvas and buttons */
+}
+
+#toolbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    width: calc(100% - 20px); /* Adjusted width for mobile */
+    text-align: center; /* Center buttons for mobile */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    margin: 5px; /* Add margin between buttons for mobile */
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Decrease font size for mobile */
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Arial, sans-serif; /* Default font family */
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+#delete-button {
+    background-color: #f44336; /* Red */
+}
+
+#add-text-button {
+    background-color: #008CBA; /* Blue */
+}
+
+#add-text-button:hover {
+    background-color: #005F7F; /* Darker Blue on hover */
+}
+
+#text-controls {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"], input[type="color"], input[type="number"], select {
+    width: calc(50% - 20px); /* Adjusted width for mobile */
+    margin: 5px; /* Add margin between inputs for mobile */
+    padding: 8px; /* Add padding to inputs */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#imageInput {
+    display: none;
+}
+
+#upload-image-button {
+    margin: 5px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Decrease font size for mobile */
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Arial, sans-serif; /* Default font family */
+}
+
+#upload-image-button:hover {
+    background-color: #45a049; /* Darker Green */
+}
+
+#templatePreviews {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.template-preview {
+    display: inline-block;
+    width: 100px; /* Adjusted width for mobile */
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    input[type="text"], input[type="color"], input[type="number"], select {
+        width: calc(100% - 20px); /* Adjusted width for mobile */
+    }
+}
